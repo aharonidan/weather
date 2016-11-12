@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 from helper import parse_json, fetch_data
-import pdb
 
 forecast = parse_json('forecast.json')
 
