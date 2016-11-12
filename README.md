@@ -4,11 +4,14 @@ This code implements a simple web service to retrieve weather forecast informati
 
 A live server is running at http://weatherf.herokuapp.com/.
 
-To run the server locally download the files and run `python app.py`.
-
+To run the server locally download the files and run:
+```
+pip install -r requirements.txt
+python app.py
+```
 The attached London weather forecast.json comes from www.openweathermap.org. The data is taken from this file.
 
-The following options are provided:
+### The following options are provided:
 
 #### A general summary of the weather:
 `curl http://<host:ip>/weather/london/<date>/<hour minute>/`
@@ -53,7 +56,7 @@ e.g. `curl http://<host:ip>/weather/london/20160706/0900/humidity/`
 }
 ```
 
-##### When no data is found:
+#### When no data is found:
 `curl http://<host:ip>/weather/london/17670812/0900/temperature`
 ```
 {
