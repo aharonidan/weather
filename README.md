@@ -27,6 +27,7 @@ e.g. `curl http://<host:ip>/weather/london/20160706/0900/`
 #### Ask for individual pieces of information:
 
 `curl http://<host:ip>/weather/london/<date>/<hour minute>/temperature`
+
 e.g. `curl http://<host:ip>/weather/london/20160706/0900/temperature/`
 ```
 {
@@ -35,6 +36,7 @@ e.g. `curl http://<host:ip>/weather/london/20160706/0900/temperature/`
 ```
 
 `curl http://<host:ip>/weather/london/<date>/<hour minute>/pressure`
+
 e.g. `curl http://<host:ip>/weather/london/20160706/0900/pressure/`
 ```
 {
@@ -43,6 +45,7 @@ e.g. `curl http://<host:ip>/weather/london/20160706/0900/pressure/`
 ```
 
 `curl http://<host:ip>/weather/london/<date>/<hour minute>/humidity`
+
 e.g. `curl http://<host:ip>/weather/london/20160706/0900/humidity/`
 ```
 {
