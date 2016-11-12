@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
-from helper import parse_forecast_json, fetch_data
+from helper import parse_json, fetch_data
 import pdb
 
-forecast = parse_forecast_json('forecast.json')
+forecast = parse_json('forecast.json')
 
 app = Flask(__name__)
 
@@ -16,9 +16,9 @@ def weather_attribute(date, time, attr):
     data = fetch_data(forecast, date, time, attr)
     return jsonify(data)
 
-# @app.errorhandler(Exception)
-# def all_exception_handler(error):
-#    return jsonify({"status": "error"}), 400
+@app.errorhandler(Exception)
+def all_exception_handler(error):
+   return jsonify({"status": "error"})
 
 if __name__ == '__main__':
     app.run(debug=True)
