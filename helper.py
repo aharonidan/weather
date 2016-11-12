@@ -1,6 +1,8 @@
 import json
 from datetime import datetime
 
+# List of all attributes included in the weather summary.
+# Each attribute is linked to a method that extracts and formats the data.
 attributes = {
     'description': lambda item: item['weather'][0]['description'],
     'temperature': lambda item: kelvin_to_celsius(item['main']['temp']),
